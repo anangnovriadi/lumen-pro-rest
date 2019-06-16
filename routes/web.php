@@ -15,10 +15,9 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->post('login', 'UserController@authenticate');
-$router->get('product', 'ProductController@index');
-$router->get('product/{id}', 'ProductController@show');
-$router->post('product/create', 'ProductController@store');
-$router->post('product/update/{id}', 'ProductController@update');
-$router->post('product/delete/{id}', 'ProductController@delete');
+$router->get('checklist', 'ChecklistController@index');
+$router->get('checklist/{id}', 'ChecklistController@show');
+$router->post('checklist/create', 'ChecklistController@store');
+$router->post('checklist/update/{id}', 'ChecklistController@update');
+$router->post('checklist/delete/{id}', 'ChecklistController@delete');
 
