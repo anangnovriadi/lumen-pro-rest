@@ -20,6 +20,9 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+// Auth
+$router->post('login', 'UserController@authenticate');
+
 $router->get('checklist', 'ChecklistController@index');
 $router->get('checklist/{id}', 'ChecklistController@show');
 $router->post('checklist', 'ChecklistController@store');
